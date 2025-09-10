@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ruppesh — Digital Portfolio</title>
+  <meta name="description" content="Ruppesh — Student portfolio: about, projects, contact & resume" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧑‍💻</text></svg>">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#home">Ruppesh</a>
+      <nav class="nav" id="main-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <button id="theme-toggle" class="btn-ghost" aria-label="Toggle theme">🌙</button>
+      </nav>
+      <button class="hamburger" id="menu-btn" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero" aria-label="Home">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Hi — I’m <span class="accent">Ruppesh</span></h1>
+          <p class="lead" id="typing">I build interactive web experiences for learning & projects.</p>
+          <div class="hero-ctas">
+            <a class="btn" href="#projects">See my projects</a>
+            <a class="btn-outline" href="#contact">Hire me</a>
+            <a class="btn-ghost" id="download-resume" href="resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+          </div>
+        </div>
+        <div class="hero-card" aria-hidden="false">
+          <div class="avatar">
+            <!-- placeholder avatar -->
+            <img src="https://via.placeholder.com/300x300.png?text=R" alt="Ruppesh avatar">
+          </div>
+          <ul class="hero-stats">
+            <li><strong>10+</strong><span>Projects</span></li>
+            <li><strong>3</strong><span>Experience</span></li>
+            <li><strong>100%</strong><span>Passion</span></li>
+          </ul>
+        </div>
+      </div>
+      <svg class="hero-wave" viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0,40 C200,120 400,0 720,40 C1040,80 1240,20 1440,60 L1440,100 L0,100 Z" fill="var(--surface)"></path></svg>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section container" aria-label="About me">
+      <div class="grid about-grid">
+        <div class="card about-card aos">
+          <h2>About Me</h2>
+          <p>I'm <strong>Ruppesh</strong>, a student developer interested in web development, UI, and teaching. I build small apps & portfolios, focusing on clean, responsive design and accessible interfaces.</p>
+          <p>I enjoy experimenting with JavaScript, CSS animations, and organizing projects on GitHub.</p>
+          <p><strong>Location:</strong> India · <strong>Email:</strong> <a href="mailto:example@example.com">example@example.com</a></p>
+          <div class="tags">
+            <span class="tag">Student</span>
+            <span class="tag">Web Dev</span>
+            <span class="tag">UI/UX</span>
+            <span class="tag">Open Source</span>
+          </div>
+        </div>
+
+        <div class="card aos">
+          <h3>Education & Awards</h3>
+          <ul class="timeline">
+            <li><strong>2023 - Present</strong> — B.Sc. Computer Science (Student)</li>
+            <li><strong>2024</strong> — College coding competition winner</li>
+            <li><strong>2024</strong> — Intern: Frontend Development</li>
+          </ul>
+          <h3 style="margin-top:1rem">Quick facts</h3>
+          <div class="fact-grid">
+            <div><strong>Languages</strong><br>HTML, CSS, JS, Java</div>
+            <div><strong>Tools</strong><br>GitHub, VSCode, Chrome DevTools</div>
+            <div><strong>Interests</strong><br>Teaching, Open Source</div>
+            <div><strong>Availability</strong><br>Part-time / Projects</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section container">
+      <h2 class="section-title aos">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill aos">
+          <h4>HTML & Accessibility</h4>
+          <div class="skill-bar"><div style="--skill:90%" aria-hidden="true"></div></div>
+        </div>
+        <div class="skill aos">
+          <h4>CSS & Animations</h4>
+          <div class="skill-bar"><div style="--skill:85%"></div></div>
+        </div>
+        <div class="skill aos">
+          <h4>JavaScript</h4>
+          <div class="skill-bar"><div style="--skill:80%"></div></div>
+        </div>
+        <div class="skill aos">
+          <h4>Java</h4>
+          <div class="skill-bar"><div style="--skill:70%"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section container">
+      <div class="projects-header aos">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-controls">
+          <input id="project-search" placeholder="Search projects..." />
+          <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="java">Java</button>
+            <button class="filter-btn" data-filter="design">Design</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+        <!-- each card uses data-tags for filtering -->
+        <article class="project-card aos" data-tags="web">
+          <div class="project-media"><img data-src="https://via.placeholder.com/600x380.png?text=Project+1" alt="Project 1 screenshot" class="lazy"></div>
+          <div class="project-body">
+            <h3>Student Profile Portal</h3>
+            <p>A GitHub hosted student portfolio & project showcase built with HTML/CSS/JS. Includes search and filter.</p>
+            <div class="project-meta"><span>Web</span><span>HTML, CSS, JS</span></div>
+            <div class="project-actions">
+              <button class="btn-sm view-btn" data-title="Student Profile Portal" data-desc="A GitHub hosted student portfolio.">Preview</button>
+              <a class="btn-sm btn-outline" href="#" target="_blank" rel="noopener">Source</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card aos" data-tags="java">
+          <div class="project-media"><img data-src="https://via.placeholder.com/600x380.png?text=Java+App" alt="Java app screenshot" class="lazy"></div>
+          <div class="project-body">
+            <h3>Attendance Manager (Java)</h3>
+            <p>Simple Java Swing application for tracking attendance with CSV export.</p>
+            <div class="project-meta"><span>Java</span><span>Swing, CSV</span></div>
+            <div class="project-actions">
+              <button class="btn-sm view-btn" data-title="Attendance Manager" data-desc="Java Swing application.">Preview</button>
+              <a class="btn-sm btn-outline" href="#" target="_blank" rel="noopener">Source</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card aos" data-tags="design web">
+          <div class="project-media"><img data-src="https://via.placeholder.com/600x380.png?text=Design+Case" alt="Design screenshot" class="lazy"></div>
+          <div class="project-body">
+            <h3>UI Case Study</h3>
+            <p>Design-first case study exploring responsive card layouts and accessibility improvements.</p>
+            <div class="project-meta"><span>Design</span><span>Figma</span></div>
+            <div class="project-actions">
+              <button class="btn-sm view-btn" data-title="UI Case Study" data-desc="Design-first case study.">Preview</button>
+              <a class="btn-sm btn-outline" href="#" target="_blank" rel="noopener">Case</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- more project cards can be added here -->
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container">
+      <h2 class="section-title aos">Contact</h2>
+      <div class="grid contact-grid">
+        <div class="card contact-card aos">
+          <h3>Get in touch</h3>
+          <p>If you want to collaborate or have a project, send me a message.</p>
+          <form id="contact-form" novalidate>
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" id="name" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" id="email" required />
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" id="message" rows="5" required></textarea>
+            </label>
+            <div class="form-actions">
+              <button type="submit" class="btn">Send message</button>
+              <button type="button" class="btn-ghost" id="save-draft">Save draft</button>
+            </div>
+            <p class="form-note" id="form-note" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <div class="card contact-info aos">
+          <h3>Reach me at</h3>
+          <p><strong>Email:</strong> <a href="mailto:example@example.com">example@example.com</a></p>
+          <p><strong>GitHub:</strong> <a href="#" target="_blank" rel="noopener">github.com/ruppesh</a></p>
+          <p><strong>Location:</strong> India</p>
+          <div class="socials">
+            <a href="#" target="_blank" rel="noopener" aria-label="GitHub">🐙</a>
+            <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">🔗</a>
+            <a href="#" target="_blank" rel="noopener" aria-label="Twitter">🐦</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PROJECT MODAL -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-inner">
+      <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+      <div id="modal-content">
+        <h3 id="modal-title"></h3>
+        <p id="modal-desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="current-year"></span> Ruppesh. Built with ❤️</p>
+      <a href="#home" class="back-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
